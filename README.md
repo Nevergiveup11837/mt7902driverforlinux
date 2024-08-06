@@ -38,7 +38,13 @@ This repository provides the necessary files and script to install the MT7902 Wi
    cd mt7902driverforlinux
    
 NOTES: You should use chmod +x install_wifi_driver.sh and sudo ./install_wifi_driver.sh to run the sh file corectly.
-After install you will need to reboot your system to apply changes
+After install you will need to reboot your system to apply changes.
+Encourage contributions to create a driver that runs directly and stably on Linux.
 
-
-
+Or you can update kernel
+wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15-rc6/amd64/linux-headers-5.15.0-051500rc6-generic_5.15.0-051500rc6.202110180730_amd64.deb
+wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15-rc6/amd64/linux-headers-5.15.0-051500rc6_5.15.0-051500rc6.202110180730_all.deb
+wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15-rc6/amd64/linux-image-unsigned-5.15.0-051500rc6-generic_5.15.0-051500rc6.202110180730_amd64.deb
+wget https://kernel.ubuntu.com/~kernel-ppa/mainline/v5.15-rc6/amd64/linux-modules-5.15.0-051500rc6-generic_5.15.0-051500rc6.202110180730_amd64.deb
+sudo dpkg -i *.deb
+sudo reboot now
